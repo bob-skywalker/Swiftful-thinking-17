@@ -2,7 +2,7 @@ workflows:
   ios-workflow:
     name: swiftful-thinking-17
     environment:
-      xcode: 14.3.1  
+      xcode: 15.0
     scripts:
       - name: Running tests
         script: |
