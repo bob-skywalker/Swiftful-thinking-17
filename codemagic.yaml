@@ -9,7 +9,7 @@ workflows:
           xcodebuild test \
             -project "Swiftful-thinking-17.xcodeproj" \
             -scheme "Swiftful-thinking-17" \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
+            -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0'
       - name: Building IPA for distribution
         script: |
           xcode-project build-ipa \
