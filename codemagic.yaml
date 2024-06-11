@@ -1,0 +1,19 @@
+workflows:
+  ios-workflow:
+    name: swiftful-thinking-17
+    environment:
+      xcode: latest  # Specify the Xcode version, e.g., "13.2.1"
+    scripts:
+      - name: Running tests
+        script: |
+          xcodebuild test \
+            -project "Swiftful-thinking-17.xcodeproj" \
+            -scheme "Swiftful-thinking-17" \
+            -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest'
+      - name: Building IPA for distribution
+        script: |
+          xcode-project build-ipa \
+            --project "Swiftful-thinking-17.xcodeproj" \
+            --scheme "Swiftful-thinking-17"
+    artifacts:
+      - build/ios/ipa/*.ipa
