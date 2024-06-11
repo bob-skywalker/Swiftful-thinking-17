@@ -12,10 +12,3 @@ workflows:
             -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0'
             CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" | xcpretty
 
-      - name: Building IPA for distribution
-        script: |
-          xcode-project build-ipa \
-            --project "Swiftful-thinking-17.xcodeproj" \
-            --scheme "Swiftful-thinking-17"
-    artifacts:
-      - build/ios/ipa/*.ipa
